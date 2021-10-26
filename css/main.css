@@ -237,10 +237,11 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 7em;
+    width: 9em;
     float: right;
   }
-  .social-header ul img {
+  .social-header ul a {
+    color:black;
     width: 20px;
   }
   .hero {
