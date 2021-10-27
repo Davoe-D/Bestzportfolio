@@ -38,7 +38,7 @@ header {
 }
 
 header .logo {
-  color: #f2f3f549;
+  color: #3465c949;
   font-weight: bold;
 }
 
@@ -57,12 +57,17 @@ nav a {
   padding: 0 1rem;
 }
 
+nav .icon {
+  display: block;
+  padding: 0 1rem;
+}
+
 .social-header, .hero-design {
   display: none;
 }
 
 .hero {
-  background: blue;
+  background: #6E00FF;
   color: white;
   display: -ms-grid;
   display: grid;
@@ -183,8 +188,8 @@ section {
     place-content: center;
   }
   .right {
-    margin-left: 2em;
-    margin-top: 1em;
+    display: block;
+    position: relative;
   }
   .skills {
     margin-top: -5em;
@@ -237,12 +242,12 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 9em;
+    width: 10em;
     float: right;
   }
   .social-header ul a {
-    color:black;
     width: 20px;
+    color: black;
   }
   .hero {
     display: -ms-grid;
@@ -263,8 +268,10 @@ section {
   }
   .hero .img-content {
     margin-left: 50px;
-    height: 590px;
+    height: 500px;
     right: 0;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .meet {
     margin: unset;
@@ -274,8 +281,61 @@ section {
   }
 }
 
-.right-img {
-  float: right;
-  width: 40%;
+@media only screen and (min-width: 1250px) {
+  header {
+    padding: 2em 2em 2em 10em;
+  }
+  .social-header {
+    padding: 2em 10em 2em 0;
+  }
+  section {
+    padding: 10em 10em 4em 10em;
+  }
+  .hero .content {
+    padding: 6em 8em 6em 10em;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  header {
+    padding: 2em 2em 2em 20em;
+  }
+  .social-header {
+    padding: 2em 20em 2em 0;
+  }
+  section {
+    padding: 6em 20em 4em 20em;
+  }
+  .hero .content {
+    padding: 9em 20em 6em 20em;
+  }
+}
+
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes circleAnim {
+  from {
+    -webkit-transform: translate(262px, 798px);
+            transform: translate(262px, 798px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(262px, 830px);
+            transform: translate(262px, 830px);
+  }
+}
+
+@keyframes circleAnim {
+  from {
+    -webkit-transform: translate(262px, 798px);
+            transform: translate(262px, 798px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(262px, 830px);
+            transform: translate(262px, 830px);
+  }
 }
 /*# sourceMappingURL=main.css.map */
